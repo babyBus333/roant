@@ -1,0 +1,99 @@
+import { Table as AntdTable } from 'antd';
+import { get } from 'lodash';
+import useConfig from 'rant/hooks/useConfig';
+import { mergeField } from 'rant/utils/array';
+import { isNil } from 'rant/utils/object';
+import { replaceKeyWord } from 'rant/utils/string';
+import React, { createElement, isValidElement, ReactNode, useEffect, useState } from 'react';
+import { TableFieldProps, TableProps } from './interface';
+
+// 劫持antd table.render函数
+const createTableCellRender = (
+  field: TableFieldProps,
+  emptyHolder: string | ReactNode,
+  cellElement: any,
+) => {
+  const { render, props } = field;
+  const renderFn = render || cellElement;
+
+  return (...args: [any, Record<string, any>, number]) => {
+    const [value, record, index] = args;
+
+    const otherProps = typeof props === 'function' ? props({ value, record, index }) : props;
+    const mergedProps = { ...otherProps, value, record, index };
+
+    const renderValue = renderFn ? renderFn(mergedProps) : value;
+    const result = isValidElement(renderValue)
+      ? createElement(renderFn, mergedProps, mergedProps?.children)
+      : renderValue;
+
+    return isNil(result) ? emptyHolder : result;
+  };
+};
+
+const Table = ({
+  activeFields = [],
+  fields,
+  emptyHolder,
+  pagination,
+  total,
+  ...props
+}: TableProps) => {
+  const rokidConfig = useConfig();
+  const fieldTypes = rokidConfig?.table?.fieldTypes;
+  const { table: tableLocale } = rokidConfig.locale;
+  const [columns, setColumns] = useState<Record<string, any>[]>([]);
+
+  useEffect(() => {
+    const tableFields = mergeField<TableFieldProps>(fields, activeFields, 'dataIndex');
+    const tableColumns = tableFields
+      .filter(({ visible }) => visible !== false)
+      .map((field) => {
+        const { shouldCellUpdate, type, dataIndex } = field;
+        let shouldCellUpdateFn;
+
+        if (shouldCellUpdate === undefined && type === undefined) {
+          shouldCellUpdateFn = (record: any, prevRecord: any) =>
+            get(record, dataIndex) !== get(prevRecord, dataIndex);
+        }
+
+        return {
+          ...field,
+          render: createTableCellRender(field, emptyHolder, fieldTypes[type as string]),
+          shouldCellUpdate: shouldCellUpdateFn || shouldCellUpdate,
+        };
+      });
+
+    setColumns(tableColumns);
+  }, [activeFields]);
+
+  const mergedPagination = pagination !== false && {
+    showSizeChanger: true,
+    showTotal: (total: number) => replaceKeyWord(tableLocale.showTotal, { total }),
+    showQuickJumper: true,
+    total,
+    defaultPageSize: 10,
+    ...pagination,
+  };
+
+  if (columns.length) {
+    return (
+      <div className="rokid-table">
+        <AntdTable {...props} columns={columns} pagination={mergedPagination || pagination} />
+      </div>
+    );
+  }
+  return null;
+};
+
+Table.defaultProps = {
+  dataSource: [],
+  activeFields: [],
+  total: 0,
+  emptyHolder: '-',
+};
+
+Table.displayName = 'RTable';
+
+export * from './interface';
+export default Table;

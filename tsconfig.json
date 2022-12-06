@@ -6,6 +6,7 @@
     "esModuleInterop": true,
     "jsx": "react",
     "baseUrl": "./",
+    "lib": ["dom", "es2017"],
     "paths": {
       "@@/*": [".dumi/tmp/*"],
       "rant": ["src"],
