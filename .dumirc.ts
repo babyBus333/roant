@@ -5,6 +5,7 @@ export default defineConfig({
   themeConfig: {
     name: 'roant',
   },
+  // 解决组件库无样式问题
   extraBabelPlugins: [
     [
       'babel-plugin-import',
