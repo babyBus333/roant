@@ -1,7 +1,7 @@
 import { merge } from 'lodash';
-import RokidConfigContext from 'rant/Rconfig-provider';
-import { defaultConfig } from 'rant/Rconfig-provider/defaultConfig';
 import { useContext } from 'react';
+import RokidConfigContext from 'roant/Rconfig-provider';
+import { defaultConfig } from 'roant/Rconfig-provider/defaultConfig';
 
 const useConfig = () => {
   const rokidConfig = useContext(RokidConfigContext);

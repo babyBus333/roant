@@ -1,6 +1,6 @@
 import { Form } from 'antd';
-import RForm, { FormProps } from 'rant/Rform';
 import React from 'react';
+import RForm, { FormProps } from 'roant/Rform';
 
 const fields = [
   {

@@ -1,9 +1,9 @@
 import Icon from '@ant-design/icons';
 import { CustomIconComponentProps } from '@ant-design/icons/lib/components/Icon';
-import React, { Button, ButtonProps, Divider, Dropdown, DropDownProps, Menu, Space } from 'antd';
+import { Button, ButtonProps, Divider, Dropdown, DropDownProps, Menu, Space } from 'antd';
 import { ItemType } from 'antd/lib/menu/hooks/useItems';
 import { omit } from 'lodash';
-import { ComponentType } from 'react';
+import React, { ComponentType } from 'react';
 import './index.less';
 
 export type ActionButtonProps = {

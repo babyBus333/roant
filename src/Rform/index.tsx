@@ -1,7 +1,7 @@
 import { Form as AntdForm, Row } from 'antd';
-import useConfig from 'rant/hooks/useConfig';
-import { getKey, mergeField } from 'rant/utils/array';
 import React, { useMemo } from 'react';
+import useConfig from 'roant/hooks/useConfig';
+import { getKey, mergeField } from 'roant/utils/array';
 import FormItem from './FormItem';
 import { FormFieldProps, FormProps } from './interface';
 

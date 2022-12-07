@@ -1,9 +1,9 @@
-# rant
+# roant
 
-[![NPM version](https://img.shields.io/npm/v/rant.svg?style=flat)](https://npmjs.org/package/rant)
-[![NPM downloads](http://img.shields.io/npm/dm/rant.svg?style=flat)](https://npmjs.org/package/rant)
+[![NPM version](https://img.shields.io/npm/v/roant.svg?style=flat)](https://npmjs.org/package/roant)
+[![NPM downloads](http://img.shields.io/npm/dm/roant.svg?style=flat)](https://npmjs.org/package/roant)
 
-rant
+roant
 
 ## Usage
 

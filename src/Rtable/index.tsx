@@ -1,10 +1,10 @@
 import { Table as AntdTable } from 'antd';
 import { get } from 'lodash';
-import useConfig from 'rant/hooks/useConfig';
-import { mergeField } from 'rant/utils/array';
-import { isNil } from 'rant/utils/object';
-import { replaceKeyWord } from 'rant/utils/string';
 import React, { createElement, isValidElement, ReactNode, useEffect, useState } from 'react';
+import useConfig from 'roant/hooks/useConfig';
+import { mergeField } from 'roant/utils/array';
+import { isNil } from 'roant/utils/object';
+import { replaceKeyWord } from 'roant/utils/string';
 import { TableFieldProps, TableProps } from './interface';
 
 // 劫持antd table.render函数

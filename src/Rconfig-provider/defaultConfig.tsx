@@ -1,6 +1,6 @@
 import { Input, Select } from 'antd';
-import DropdownAction from 'rant/DropdownAction';
-import zhCn from 'rant/locales/zh-CN';
+import DropdownAction from 'roant/DropdownAction';
+import zhCn from 'roant/locales/zh-CN';
 
 export const defaultConfig: Record<string, any> = {
   table: {
