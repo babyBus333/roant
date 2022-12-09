@@ -6,7 +6,8 @@ export default defineConfig({
     name: 'roant',
   },
   resolve: { docDirs: ['docSrc'] },
-
+  base: '/roant/',
+  publicPath: '/roant/',
   // 解决组件库无样式问题
   extraBabelPlugins: [
     [

@@ -14,9 +14,9 @@ features:
     emoji: 🐑
     description: 表单配置化，减少标签
   - title: 国际化
-    emoji: 🐑🐑
+    emoji: 🐶
     description: 支持国际化
   - title: '轻量'
-    emoji: 🐑
+    emoji: 🐨
     description: 依赖antd，无重复轮子，轻量化体积小
 ---
