@@ -1,10 +1,12 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  outputPath: 'docs-dist',
+  outputPath: 'docs',
   themeConfig: {
     name: 'roant',
   },
+  resolve: { docDirs: ['docSrc'] },
+
   // 解决组件库无样式问题
   extraBabelPlugins: [
     [
