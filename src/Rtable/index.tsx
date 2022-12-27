@@ -78,7 +78,7 @@ const Table = ({
 
   if (columns.length) {
     return (
-      <div className="rokid-table">
+      <div className="r-table">
         <AntdTable {...props} columns={columns} pagination={mergedPagination || pagination} />
       </div>
     );

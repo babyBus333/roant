@@ -1,5 +1,6 @@
 module.exports = {
   extends: require.resolve('@umijs/lint/dist/config/eslint'),
+  ignorePatterns: ['dist/**', 'docSrc/**', 'docs/**'],
   rules: {
     semi: 'off',
     'no-console': 'off',
@@ -24,5 +25,6 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-unused-vars': 'error', // 解决ts函数类型定义未使用报错
     'no-unused-expressions': [2, { allowShortCircuit: true }], // 支持简写表达式 a && b()
+    '@typescript-eslint/no-explicit-any': 'off',
   },
 };
