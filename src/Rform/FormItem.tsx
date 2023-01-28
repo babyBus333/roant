@@ -14,6 +14,7 @@ const FormItem: React.FC<FormItemProps> = (itemProps) => {
     required,
     defaultProps,
     formLocale,
+    colProps,
     ...rest
   } = itemProps;
   const FormComponent = useMemo(() => {
@@ -26,9 +27,9 @@ const FormItem: React.FC<FormItemProps> = (itemProps) => {
     return Input;
   }, [render]);
 
-  let mergeColProps = commonColProps || rest.colProps;
-  if (commonColProps && rest.colProps) {
-    mergeColProps = { ...commonColProps, ...rest.colProps };
+  let mergeColProps = commonColProps || colProps;
+  if (commonColProps && colProps) {
+    mergeColProps = { ...commonColProps, ...colProps };
   }
   const ItemContainer = mergeColProps ? Col : React.Fragment;
 

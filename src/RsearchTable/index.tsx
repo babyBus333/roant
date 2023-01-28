@@ -27,11 +27,11 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
     ? undefined
     : { [pageSizeKey]: DEFAULT_SIZE, [pageCurrentKey]: DEFAULT_CURRENT };
 
-  const rokidConfig = useConfig();
+  const roantConfig = useConfig();
   const [form] = Form.useForm(outFrom);
   const [paginationQuery, setPaginationQuery] = useState(defaultPaginationQuery);
   const [loading, setLoading] = useState(false);
-  const { search, reset } = rokidConfig.locale.searchTable;
+  const { search, reset } = roantConfig.locale.searchTable;
 
   const onQuery = async (param?: Record<string, any>) => {
     try {

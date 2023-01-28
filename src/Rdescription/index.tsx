@@ -81,8 +81,8 @@ const RDescription = ({
   colProps,
   loading,
 }: DescriptionProps) => {
-  const rokidConfig = useConfig();
-  const { fieldTypes = {} } = rokidConfig.description;
+  const roantConfig = useConfig();
+  const { fieldTypes = {} } = roantConfig.description;
   const [columns, setColumns] = useState<any>([]);
 
   useEffect(() => {

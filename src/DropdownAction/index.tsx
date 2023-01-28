@@ -4,7 +4,6 @@ import { Button, ButtonProps, Divider, Dropdown, DropDownProps, Menu, Space } fr
 import { ItemType } from 'antd/lib/menu/hooks/useItems';
 import { omit } from 'lodash';
 import React, { ComponentType } from 'react';
-import './index.less';
 
 export type ActionButtonProps = {
   key?: string;
@@ -73,7 +72,7 @@ const DropdownAction = ({
 
   return (
     <Space
-      className="dropdown-action"
+      className="r-dropdown-action"
       size={0}
       split={<Divider type="vertical" style={{ borderLeft: '1px solid #E4E7EE' }} />}
     >

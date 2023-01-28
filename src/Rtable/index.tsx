@@ -39,9 +39,9 @@ const Table = ({
   total,
   ...props
 }: TableProps) => {
-  const rokidConfig = useConfig();
-  const fieldTypes = rokidConfig?.table?.fieldTypes;
-  const { table: tableLocale } = rokidConfig.locale;
+  const roantConfig = useConfig();
+  const fieldTypes = roantConfig?.table?.fieldTypes;
+  const { table: tableLocale } = roantConfig.locale;
   const [columns, setColumns] = useState<Record<string, any>[]>([]);
 
   useEffect(() => {

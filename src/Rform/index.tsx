@@ -15,8 +15,8 @@ const Form = ({
   colProps,
   ...props
 }: FormProps) => {
-  const rokidConfig = useConfig();
-  const { fieldTypes, fieldDefaultProps } = rokidConfig.form;
+  const roantConfig = useConfig();
+  const { fieldTypes, fieldDefaultProps } = roantConfig.form;
 
   const formChildren = useMemo(
     () =>
@@ -26,8 +26,8 @@ const Form = ({
           key={getKey(field.keyPath)}
           commonColProps={colProps}
           formElement={fieldTypes[field.type || DEFAULT_TYPE]}
-          defaultProps={fieldDefaultProps[field.type || DEFAULT_TYPE]}
-          formLocale={rokidConfig.locale.form}
+          defaultProps={field.render ? undefined : fieldDefaultProps[field.type || DEFAULT_TYPE]}
+          formLocale={roantConfig.locale.form}
         />
       )),
     [activeFields],
