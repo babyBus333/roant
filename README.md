@@ -1,9 +1,9 @@
-# roant
+# rokid-roant
 
-[![NPM version](https://img.shields.io/npm/v/roant.svg?style=flat)](https://npmjs.org/package/roant)
-[![NPM downloads](http://img.shields.io/npm/dm/roant.svg?style=flat)](https://npmjs.org/package/roant)
+[![NPM version](https://img.shields.io/npm/v/rokid-roant.svg?style=flat)](https://npmjs.org/package/rokid-roant)
+[![NPM downloads](http://img.shields.io/npm/dm/rokid-roant.svg?style=flat)](https://npmjs.org/package/rokid-roant)
 
-roant
+rokid-roant
 
 ## Usage
 

@@ -9,8 +9,8 @@
     "lib": ["dom", "es2017"],
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "roant": ["src"],
-      "roant/*": ["src/*", "*"]
+      "rokid-roant": ["src"],
+      "rokid-roant/*": ["src/*", "*"]
     }
   }
 }

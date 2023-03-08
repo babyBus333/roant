@@ -1,6 +1,6 @@
 ---
 hero:
-  title: roant
+  title: rokid-roant
   description: antd高阶组件
   actions:
     - text: 开始
@@ -8,7 +8,7 @@ hero:
     - text: 组件
       link: /components/rform
     - text: github
-      link: https://github.com/babyBus333/roant
+      link: https://github.com/babyBus333/rokid-roant
 features:
   - title: 更少标签
     emoji: 🐑

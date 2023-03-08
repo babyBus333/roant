@@ -1,6 +1,6 @@
 import React from 'react';
-import { Rdescription } from 'roant';
-import { DescriptionFieldProps } from 'roant/Rdescription';
+import { Rdescription } from 'rokid-roant';
+import { DescriptionFieldProps } from 'rokid-roant/Rdescription';
 
 const fields: DescriptionFieldProps[] = [
   { dataIndex: 'name', title: '姓名' },

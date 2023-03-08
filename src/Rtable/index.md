@@ -1,7 +1,7 @@
 # Rtable
 
 ```jsx
-import { Rtable } from 'roant';
+import { Rtable } from 'rokid-roant';
 
 const data = [
   { id: 1, name: 'ikun', age: 2.5 },

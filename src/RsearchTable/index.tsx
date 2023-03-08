@@ -1,8 +1,8 @@
 import { Button, Form } from 'antd';
 import React, { forwardRef, useEffect, useImperativeHandle, useState } from 'react';
-import useConfig from 'roant/hooks/useConfig';
-import Rform from 'roant/Rform';
-import Rtable from 'roant/Rtable';
+import useConfig from 'rokid-roant/hooks/useConfig';
+import Rform from 'rokid-roant/Rform';
+import Rtable from 'rokid-roant/Rtable';
 import './index.less';
 import { SearchTableActionMethods, SearchTableProps } from './interface';
 

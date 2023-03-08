@@ -1,9 +1,9 @@
 import { Col, Row, Spin } from 'antd';
 import { get } from 'lodash';
 import React, { createElement, Fragment, isValidElement, useEffect, useState } from 'react';
-import useConfig from 'roant/hooks/useConfig';
-import { getKey, mergeField } from 'roant/utils/array';
-import { isNil } from 'roant/utils/object';
+import useConfig from 'rokid-roant/hooks/useConfig';
+import { getKey, mergeField } from 'rokid-roant/utils/array';
+import { isNil } from 'rokid-roant/utils/object';
 import './index.less';
 import { DescriptionFieldProps, DescriptionProps } from './interface';
 

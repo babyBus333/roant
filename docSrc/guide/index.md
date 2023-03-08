@@ -23,7 +23,7 @@ nav:
 ## 安装依赖
 
 ```bash
-$ npm i roant
+$ npm i rokid-roant
 ```
 
 ## 组件库配置
@@ -31,7 +31,7 @@ $ npm i roant
 组件库使用 react.context 共享配置项在 react 根组件配置，保证全局组件可访问
 
 ```tsx | pure
-import { RconfigContext } from 'roant';
+import { RconfigContext } from 'rokid-roant';
 
 <RconfigContext.Provider value={roantConfig}>
   <App />

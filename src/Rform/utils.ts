@@ -1,4 +1,4 @@
-import { replaceKeyWord } from 'roant/utils/string';
+import { replaceKeyWord } from 'rokid-roant/utils/string';
 
 export function getRequiredMessage<T extends { type?: string }>(
   field: T,

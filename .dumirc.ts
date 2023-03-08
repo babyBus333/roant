@@ -3,11 +3,11 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   outputPath: 'docs',
   themeConfig: {
-    name: 'roant',
+    name: 'rokid-roant',
   },
   resolve: { docDirs: ['docSrc'] },
-  base: '/roant/',
-  publicPath: '/roant/',
+  base: '/rokid-roant/',
+  publicPath: '/rokid-roant/',
   // 解决组件库无样式问题
   extraBabelPlugins: [
     [
