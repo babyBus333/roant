@@ -1,4 +1,4 @@
-import { Rtable } from 'rokid-roant';
+import { Rtable } from 'roant';
 
 const data = [
   { id: 1, name: 'ikun', age: 2.5 },

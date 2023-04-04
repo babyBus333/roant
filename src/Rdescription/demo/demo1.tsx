@@ -1,6 +1,6 @@
 import React from 'react';
-import { Rdescription } from 'rokid-roant';
-import { DescriptionFieldProps } from 'rokid-roant/Rdescription';
+import { Rdescription } from 'roant';
+import { DescriptionFieldProps } from 'roant/Rdescription';
 
 const tagStyle = {
   padding: '5px 10px',

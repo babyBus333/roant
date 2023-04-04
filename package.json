@@ -1,7 +1,7 @@
 {
-  "name": "rokid-roant",
+  "name": "roant",
   "version": "0.0.6",
-  "description": "rokid-roant",
+  "description": "roant",
   "license": "MIT",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

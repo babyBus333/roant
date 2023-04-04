@@ -1,6 +1,6 @@
 import React from 'react';
-import { RsearchTable } from 'rokid-roant';
-import { SearchTableActionMethods, SearchTableProps } from 'rokid-roant/RsearchTable';
+import { RsearchTable } from 'roant';
+import { SearchTableActionMethods, SearchTableProps } from 'roant/RsearchTable';
 
 const getData = (param: any) => {
   console.log(param);
