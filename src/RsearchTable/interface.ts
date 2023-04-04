@@ -3,7 +3,7 @@ import { FormProps } from '../Rform/interface';
 import { TableProps } from '../Rtable/interface';
 
 export type SearchTableActionMethods = {
-  onQuery: () => void;
+  onQuery: (param: Record<string, any>) => void;
   onReset: () => void;
 };
 
