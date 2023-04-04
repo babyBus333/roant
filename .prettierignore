@@ -1,2 +1,6 @@
 /dist
 *.yaml
+dist/**
+docSrc/**
+docs/** 
+**.md

@@ -1,6 +1,6 @@
 module.exports = {
   extends: require.resolve('@umijs/lint/dist/config/eslint'),
-  ignorePatterns: ['dist/**', 'docSrc/**', 'docs/**'],
+  ignorePatterns: ['dist/**', 'docSrc/**', 'docs/**', '**.md'],
   rules: {
     semi: 'off',
     'no-console': 'off',

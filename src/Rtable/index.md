@@ -9,14 +9,14 @@
 
 ### TableProps
 
-| 参数         | 说明                                                       | 类型                  | 默认值  | 版本 |
-| ------------ | ---------------------------------------------------------- | --------------------- | ------- | ---- |
-| dataSource   | 数据源，同 antd dataSource                                 | Record<string, any>[] | []      |      |
-| fields       | 表格列配置                                                 | TableFieldProps[]     | []      |      |
-| activeFields | 动态表格列配置,通过 dataIndex 作为唯一值与 fields 深度合并 | FormFieldProps[]      | -       |      |
-| total        | 列表总数                                                   | number                | -       |      |
-| emptyHolder  | 表格控制占位符表格值为 null\|''\|undefined                 | string \| ReactNode   | 默认'-' |      |
-| ...rest      | 多余属性会合并传递给 Table 组件                            | any                   | -       |      |
+| 参数 | 说明 | 类型| 默认值| 版本 |
+| --- | --- | --- | --- | --- |
+| dataSource | 数据源，同 antd dataSource | Record<string, any>[] | []||
+| fields | 表格列配置 | TableFieldProps[] | []||
+| activeFields | 动态表格列配置,通过 dataIndex 作为唯一值与 fields 深度合并 | FormFieldProps[]| - ||
+| total| 列表总数 | number| - ||
+| emptyHolder| 表格控制占位符表格值为 null\|''\|undefined | string \| ReactNode | 默认'-' ||
+| ...rest| 多余属性会合并传递给 Table 组件| any | - ||
 
 ### TableProps.fields
 

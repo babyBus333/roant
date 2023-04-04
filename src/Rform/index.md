@@ -6,13 +6,13 @@
 
 ### RformProps
 
-| 参数         | 说明                                                                                           | 类型                                                 | 默认值 | 版本 |
-| ------------ | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------ | ---- | --- |
-| fields       | 表单字段                                                                                       | FormFieldProps[]                                     | []     |      |
-| activeFields | 表单动态字段                                                                                   | FormFieldProps[]                                     | -      |      |
-| rowProps     | 栅格 row 属性 属性传给 antd [Row](https://4x.ant.design/components/grid-cn/)                   | 参考[Row](https://4x.ant.design/components/grid-cn/) | -      | -    |     |
-| colProps     | form.item 栅格 row 属性批量赋值 属性传给 antd [Col](https://4x.ant.design/components/grid-cn/) | 参考[Col](https://4x.ant.design/components/grid-cn/) | -      | -    |     |
-| form         | form 实例，不传组件内部会默认生成 [form](https://4x.ant.design/components/form-cn/)            | FormInstance                                         | -      | -    |     |
+| 参数 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| fields | 表单字段 | FormFieldProps[] | [] ||
+| activeFields | 表单动态字段 | FormFieldProps[] | -||
+| rowProps | 栅格 row 属性 属性传给 antd [Row](https://4x.ant.design/components/grid-cn/) | 参考[Row](https://4x.ant.design/components/grid-cn/) | -| -| |
+| colProps | form.item 栅格 row 属性批量赋值 属性传给 antd [Col](https://4x.ant.design/components/grid-cn/) | 参考[Col](https://4x.ant.design/components/grid-cn/) | -| -| |
+| form | form 实例，不传组件内部会默认生成 [form](https://4x.ant.design/components/form-cn/)| FormInstance | -| -| |
 
 ### RformProps.fields
 
