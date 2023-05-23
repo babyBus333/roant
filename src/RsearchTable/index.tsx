@@ -21,11 +21,13 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
     autoQuery = true,
     pageSizeKey = 'size',
     pageCurrentKey = 'current',
+    defaultSize = DEFAULT_SIZE,
+    defaultCurrent = DEFAULT_CURRENT,
   } = props;
   const noPagination = externalTableProps.pagination === false;
   const defaultPaginationQuery = noPagination
     ? undefined
-    : { [pageSizeKey]: DEFAULT_SIZE, [pageCurrentKey]: DEFAULT_CURRENT };
+    : { [pageSizeKey]: defaultSize, [pageCurrentKey]: defaultCurrent };
 
   const roantConfig = useConfig();
   const [form] = Form.useForm(outFrom);
@@ -93,10 +95,10 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
     externalTableProps.pagination;
 
   const tableProps = {
+    loading,
     ...externalTableProps,
     dataSource,
     total,
-    loading,
     pagination,
   };
   return (

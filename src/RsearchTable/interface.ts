@@ -19,4 +19,6 @@ export type SearchTableProps = {
   form?: FormInstance;
   pageSizeKey?: string;
   pageCurrentKey?: string;
+  defaultSize?: number;
+  defaultCurrent?: number;
 };
