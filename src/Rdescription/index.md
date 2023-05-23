@@ -7,17 +7,17 @@
 
 ### DescriptionProps
 
-| 参数         | 说明                                                                     | 类型                                                 | 默认值  | 版本 |
-| ------------ | ------------------------------------------------------------------------ | ---------------------------------------------------- | ------- | ---- | --- |
-| dataSource   | 数据源                                                                   | Record<string, any>[]                                | []      |      |
-| fields       | 列表配置                                                                 | TableFieldProps[]                                    | []      |      |
-| activeFields | 动态列表配置,通过 dataIndex 作为唯一值与 fields 深度合并                 | FormFieldProps[]                                     | -       |      |
-| loading      | 列表加载中                                                               | boolean                                              | false   |      |
-| titleSuffix  | 渲染在标题 title 后的值                                                  | string                                               | ''      |      |
-| emptyHolder  | 列表占位符表格值为 null\|''\|undefined                                   | string \| ReactNode                                  | 默认'-' |      |
-| rowProps     | 栅格 row 属性 [Row](https://4x.ant.design/components/grid-cn/)           | 参考[Row](https://4x.ant.design/components/grid-cn/) | -       | -    |     |
-| colProps     | 默认传递给列表 col 属性 [Col](https://4x.ant.design/components/grid-cn/) | 参考[Col](https://4x.ant.design/components/grid-cn/) | -       | -    |     |
-| ...rest      | 多余属性会合并传递给 Table 组件                                          | any                                                  | -       |      |
+| 参数 | 说明 | 类型 | 默认值| 版本 |
+| --- | --- | --- | --- | --- |
+| dataSource | 数据源 | Record<string, any>[]| []||
+| fields | 列表配置 | TableFieldProps[]| []||
+| activeFields | 动态列表配置,通过 dataIndex 作为唯一值与 fields 深度合并 | FormFieldProps[] | - ||
+| loading| 列表加载中 | boolean| false ||
+| titleSuffix| 渲染在标题 title 后的值| string | ''||
+| emptyHolder| 列表占位符表格值为 null\|''\|undefined | string \| ReactNode| 默认'-' ||
+| rowProps | 栅格 row 属性 [Row](https://4x.ant.design/components/grid-cn/) | 参考[Row](https://4x.ant.design/components/grid-cn/) | - | -| |
+| colProps | 默认传递给列表 col 属性 [Col](https://4x.ant.design/components/grid-cn/) | 参考[Col](https://4x.ant.design/components/grid-cn/) | - | -| |
+| ...rest| 多余属性会合并传递给 Table 组件| any| - ||
 
 ### DescriptionProps.fields
 
