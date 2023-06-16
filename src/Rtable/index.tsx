@@ -65,7 +65,7 @@ const Table = ({
       });
 
     setColumns(tableColumns);
-  }, [activeFields]);
+  }, [activeFields, fields]);
 
   const mergedPagination = pagination !== false && {
     showSizeChanger: true,
