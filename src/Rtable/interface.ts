@@ -1,5 +1,5 @@
-import { ColumnProps } from 'antd/lib/table/Column';
 import { TableProps as AntdTableProps } from 'antd/lib/table';
+import { ColumnProps } from 'antd/lib/table/Column';
 
 export type ColumnKey = string | string[];
 
@@ -16,4 +16,6 @@ export interface TableProps extends AntdTableProps<Record<string, any>> {
   fields: TableFieldProps[];
   activeFields?: TableFieldProps[];
   emptyHolder?: string;
+  tableContainer?: React.FC<any>;
+  tableContainerProps?: Record<string, any>;
 }

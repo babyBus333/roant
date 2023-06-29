@@ -1,6 +1,13 @@
 import { Table as AntdTable } from 'antd';
 import { get } from 'lodash';
-import React, { createElement, isValidElement, ReactNode, useEffect, useState } from 'react';
+import React, {
+  createElement,
+  Fragment,
+  isValidElement,
+  ReactNode,
+  useEffect,
+  useState,
+} from 'react';
 import useConfig from 'rokid-roant/hooks/useConfig';
 import { mergeField } from 'rokid-roant/utils/array';
 import { isNil } from 'rokid-roant/utils/object';
@@ -37,6 +44,8 @@ const Table = ({
   emptyHolder,
   pagination,
   total,
+  tableContainer,
+  tableContainerProps,
   ...props
 }: TableProps) => {
   const roantConfig = useConfig();
@@ -76,10 +85,14 @@ const Table = ({
     ...pagination,
   };
 
+  const AntdTableContainer = tableContainer || Fragment;
+
   if (columns.length) {
     return (
       <div className="r-table">
-        <AntdTable {...props} columns={columns} pagination={mergedPagination || pagination} />
+        <AntdTableContainer {...tableContainerProps}>
+          <AntdTable {...props} columns={columns} pagination={mergedPagination || pagination} />
+        </AntdTableContainer>
       </div>
     );
   }
