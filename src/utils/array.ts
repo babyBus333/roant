@@ -1,4 +1,4 @@
-import { isArray, merge } from 'lodash';
+import { cloneDeep, isArray, merge } from 'lodash';
 
 export const getKey = (key: string | string[]): string =>
   isArray(key) ? (key as string[]).join('.') : (key as string);
@@ -14,7 +14,7 @@ export const getKey = (key: string | string[]): string =>
 export function mergeField<T>(fields: T[], activeField: T[], mergeKey: string): T[] {
   if (fields.length && activeField.length) {
     const fieldMap: Record<string, any> = {};
-    const newFields = [...fields];
+    const newFields = cloneDeep(fields) as T[];
     const otherFields: T[] = [];
 
     newFields.forEach((item, index) => {
