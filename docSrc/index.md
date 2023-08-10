@@ -7,8 +7,8 @@ hero:
       link: /guide
     - text: 组件
       link: /components/rform
-    - text: github
-      link: https://github.com/babyBus333/rokid-roant
+    - text: git
+      link: https://gitlab.rokid-inc.com/cdc-frontend/rokid-roant
 features:
   - title: 更少标签
     emoji: 🐑

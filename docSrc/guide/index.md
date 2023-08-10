@@ -21,7 +21,7 @@ nav:
 ```
 
 ## 安装依赖
-
+使用公司源https://npm.rokid-inc.com/repository/npm-group/ 安装npm包
 ```bash
 $ npm i rokid-roant
 ```
