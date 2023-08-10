@@ -6,8 +6,8 @@ export default defineConfig({
     name: 'rokid-roant',
   },
   resolve: { docDirs: ['docSrc'] },
-  base: '/rokid-roant/',
-  publicPath: '/rokid-roant/',
+  base: '/roant/',
+  publicPath: '/roant/',
   // 解决组件库无样式问题
   extraBabelPlugins: [
     [
