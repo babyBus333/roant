@@ -34,6 +34,7 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
   const [paginationQuery, setPaginationQuery] = useState(defaultPaginationQuery);
   const [loading, setLoading] = useState(false);
   const { search, reset } = roantConfig.locale.searchTable;
+  const isEnterQuery = props.isEnterQuery ?? roantConfig.searchTable?.isEnterQuery;
 
   const onQuery = async (param?: Record<string, any>) => {
     try {
@@ -43,11 +44,6 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
     } finally {
       setLoading(false);
     }
-  };
-
-  const onSearch = async () => {
-    setPaginationQuery(defaultPaginationQuery);
-    onQuery(defaultPaginationQuery);
   };
 
   const onReset = async () => {
@@ -65,17 +61,6 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
     // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     autoQuery && onQuery();
   }, []);
-
-  const ActionComponent = (
-    <>
-      <Button type="primary" onClick={() => onSearch()}>
-        {search}
-      </Button>
-      <Button style={{ margin: '0 8px' }} onClick={onReset}>
-        {reset}
-      </Button>
-    </>
-  );
 
   const toolbarComponent = toolbar ? (
     <div className="r-table-operation-container">{toolbar}</div>
@@ -101,11 +86,31 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
     total,
     pagination,
   };
+
+  const onSearch = () => {
+    if (!isEnterQuery) onQuery();
+  };
+
+  const ActionComponent = (
+    <>
+      <Button
+        loading={tableProps.loading}
+        htmlType={isEnterQuery ? 'submit' : 'button'}
+        type="primary"
+        onClick={onSearch}
+      >
+        {search}
+      </Button>
+      <Button style={{ margin: '0 8px' }} onClick={onReset}>
+        {reset}
+      </Button>
+    </>
+  );
   return (
     <div className="r-search-table">
       {formProps && (
         <div className="r-search-form-container">
-          <Rform {...formProps} form={form}>
+          <Rform {...formProps} onFinish={() => onQuery()} form={form}>
             <div className="r-search-table-action-container">{ActionComponent}</div>
           </Rform>
         </div>

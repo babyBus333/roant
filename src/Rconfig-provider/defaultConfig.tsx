@@ -21,5 +21,8 @@ export const defaultConfig: Record<string, any> = {
       select: { allowClear: true },
     },
   },
+  searchTable: {
+    isEnterQuery: false,
+  },
   locale: zhCn,
 };

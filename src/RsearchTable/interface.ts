@@ -21,4 +21,5 @@ export type SearchTableProps = {
   pageCurrentKey?: string;
   defaultSize?: number;
   defaultCurrent?: number;
+  isEnterQuery?: boolean;
 };
