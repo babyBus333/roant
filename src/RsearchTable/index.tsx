@@ -88,7 +88,15 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
   };
 
   const onSearch = () => {
-    if (!isEnterQuery) onQuery();
+    if (!isEnterQuery) {
+      setPaginationQuery(defaultPaginationQuery);
+      onQuery(defaultPaginationQuery);
+    }
+  };
+
+  const enterSubmit = () => {
+    setPaginationQuery(defaultPaginationQuery);
+    onQuery(defaultPaginationQuery);
   };
 
   const ActionComponent = (
@@ -110,7 +118,7 @@ const RsearchTable = (props: SearchTableProps, ref: React.Ref<SearchTableActionM
     <div className="r-search-table">
       {formProps && (
         <div className="r-search-form-container">
-          <Rform {...formProps} onFinish={() => onQuery()} form={form}>
+          <Rform {...formProps} onFinish={enterSubmit} form={form}>
             <div className="r-search-table-action-container">{ActionComponent}</div>
           </Rform>
         </div>
