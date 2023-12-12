@@ -7,6 +7,9 @@
 
 值变化表格不响应渲染？如果没有 type，为了优化性能 shouldCellUpdate=对比前后 dataIndex 获取的值是否相同，如果前后值变化又需要强制渲染 field 里可设置 shouldCellUpdate=()=>true 更多参考 [shouldCellUpdate](https://4x.ant.design/components/table-cn/)
 
+### 字段合并
+activeFields与fields的对象使用lodash进行深度拷贝合并，所有在fields字段里需要动态修改的字段需要在activeFields申明才会被动态覆盖
+
 ### TableProps
 
 | 参数 | 说明 | 类型| 默认值| 版本 |

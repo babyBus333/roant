@@ -4,6 +4,9 @@
 自定义表单组件参看 antd form [自定义组件](https://4x.ant.design/components/form-cn/#components-form-demo-customized-form-controls) 核心为传递接收 表单值 value、修改表单值方法 onChange
 <code src="./demo/demo1.tsx">基本使用</code>
 
+### 字段合并
+activeFields与fields的对象使用lodash进行深度拷贝合并，所有在fields字段里需要动态修改的字段需要在activeFields申明才会被动态覆盖
+
 ### RformProps
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
