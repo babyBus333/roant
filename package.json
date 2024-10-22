@@ -1,6 +1,6 @@
 {
   "name": "roant",
-  "version": "0.1.3",
+  "version": "1.0.0",
   "description": "roant",
   "license": "MIT",
   "module": "dist/index.js",

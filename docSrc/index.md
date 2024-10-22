@@ -8,7 +8,7 @@ hero:
     - text: 组件
       link: /components/rform
     - text: git
-      link: https://gitlab.inc.com/cdc-frontend/roant
+      link: https://babybus333.github.io/roant/components/rsearchtable
 features:
   - title: 更少标签
     emoji: 🐑
